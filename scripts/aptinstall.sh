@@ -20,7 +20,7 @@ install nmap
 install tree
 install pdftk
 install gnome-tweaks
-
+install mlocate
 
 # Dev
 install emacs
