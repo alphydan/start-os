@@ -7,6 +7,7 @@
 kw=("kw" "kw-report" "-->" "baut-code/kw-report/" 1)
 coin=("coin" "coinbase-trading" "-->" "baut-code/coinbase-trading/" 1)
 daot=("daot" "daot-code" "-->" "daot-code/" 0)
+joy=("joy" "ligo-joy-division" "-->" "daot-code/1.product/experiments/ligo-joy-division/" 1)
 
 # help flag: display project details
 if [ "$1" == "-h" ]; then
@@ -27,6 +28,9 @@ if [ "$1" != "-h" ]; then
     elif [ "$1" == "daot" ]; then
 	project_path=${daot[3]}
 	has_notebook=${daot[4]}
+    elif [ "$1" == "joy" ]; then
+	project_path=${joy[3]}
+	has_notebook=${joy[4]}
     else
 	echo "project not found"
     fi
