@@ -45,7 +45,7 @@ install gimp
 install jpegoptim
 install optipng
 install inkscape
-
+install gwenview
 
 # Fun stuff
 install cowsay
