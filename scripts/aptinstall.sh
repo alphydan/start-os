@@ -31,6 +31,8 @@ install anki
 install filezilla
 install pandoc
 
+# Documents (PDF)
+install okular
 # Media
 install openshot
 install youtube-dl

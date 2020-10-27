@@ -8,12 +8,15 @@ kw=("kw" "kw-report" "-->" "baut-code/kw-report/" 1)
 coin=("coin" "coinbase-trading" "-->" "baut-code/coinbase-trading/" 1)
 daot=("daot" "daot-code" "-->" "daot-code/" 0)
 joy=("joy" "ligo-joy-division" "-->" "daot-code/1.product/experiments/ligo-joy-division/" 1)
+shop=("shop" "autoshop" "-->" "baut-code/autoshop/" 0)
 
 # help flag: display project details
 if [ "$1" == "-h" ]; then
     echo ${kw[@]}
     echo ${coin[@]}
     echo ${daot[@]}
+    echo ${joy[@]}
+    echo ${shop[@]}
 fi
 
 # otherwise, identify project 
@@ -31,6 +34,9 @@ if [ "$1" != "-h" ]; then
     elif [ "$1" == "joy" ]; then
 	project_path=${joy[3]}
 	has_notebook=${joy[4]}
+    elif [ "$1" == "shop" ]; then
+	project_path=${shop[3]}
+	has_notebook=${shop[4]}
     else
 	echo "project not found"
     fi
@@ -39,6 +45,8 @@ if [ "$1" != "-h" ]; then
     codepath="/media/dersu/ExtraDrive1/code"
     full_path="$codepath/$project_path"
 
+    echo $full_path
+
     # Go to directory of project
     cd $full_path
 
@@ -46,5 +54,11 @@ if [ "$1" != "-h" ]; then
     # pipenv shell
     if [ "$has_notebook" = 1 ]; then
 	pipenv run jupyter notebook # --ip=0.0.0.0
+
+    elif [ "$1" == "shop" ]; then
+	pipenv shell # start virtualenv
+	python main.py
+    else
+	echo "project "$1" ready"
     fi
 fi
