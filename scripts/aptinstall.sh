@@ -18,9 +18,8 @@ install curl
 install htop
 install nmap
 install tree
-install pdftk
-install gnome-tweaks
-install mlocate
+install pdftk-java
+install anacron
 
 # Dev
 install emacs
@@ -33,21 +32,18 @@ install pandoc
 
 # Documents (PDF)
 install okular
+
 # Media
-install openshot
-install youtube-dl
+install audacity
 install qbittorrent
 
 # Security
 install keepassxc
-
+install clamav
 
 # Image processing
 install gimp
-install jpegoptim
-install optipng
 install inkscape
-install gwenview
 
 # Fun stuff
 install cowsay
