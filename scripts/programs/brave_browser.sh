@@ -1,9 +1,9 @@
 #!/bin/bash
 
 printf "\n\n RUNNING INSTALL SCRIPTS \n\n"
-printf "-----------------------------\n\n"
+printf "\n-----------------------------\n\n"
 printf "Installing Brave Browser\n\n"
-printf "-----------------------------\n\n"
+printf "\n-----------------------------\n\n"
 
 curl -fsS https://dl.brave.com/install.sh | sh
 

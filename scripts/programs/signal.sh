@@ -5,7 +5,9 @@
 #!/bin/bash
 
 printf "\n\n RUNNING INSTALL SCRIPTS \n\n"
+printf "\n-----------------------------\n\n"
 printf "💬 Installing Signal \n"
+printf "\n-----------------------------\n\n"
 
 
 # NOTE: These instructions only work for 64-bit Debian-based

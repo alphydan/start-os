@@ -1,7 +1,9 @@
 #!/bin/bash
 
 printf "\n\n RUNNING INSTALL SCRIPTS \n\n"
-printf "🔑 Installing Typora\n"
+printf "\n-----------------------------\n\n"
+printf "🗒️ Installing Typora\n"
+printf "\n-----------------------------\n\n"
 
 
 # add Typora's key

@@ -1,7 +1,10 @@
 #!/bin/bash
 
 printf "\n\n RUNNING INSTALL SCRIPTS \n\n"
-printf "Installing Yubikey Manager\n"
+printf "\n-----------------------------\n\n"
+printf "🔑 Installing Yubikey Manager\n"
+printf "\n-----------------------------\n\n"
+
 # https://support.yubico.com/hc/en-us/articles/360016649039-Enabling-the-Yubico-PPA-on-Ubuntu
 sudo add-apt-repository ppa:yubico/stable && sudo apt-get update
 
