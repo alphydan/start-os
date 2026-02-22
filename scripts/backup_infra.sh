@@ -49,13 +49,21 @@ printf "\n\n ~~~~~~~  SETTING UP BACKUP INFRASTRUCTURE ~~~~~~~~ \n\n"
 # mkdir -p ~/.local/etc/cron.daily ~/.var/spool/anacron
 
 # install rclone
-printf "\n\n install RCLONE \n\n"
-sudo apt update
-sudo -v ; curl https://rclone.org/install.sh | sudo bash
+if command -v rclone >/dev/null 2>&1; then
+    printf "rclone is already installed.\n"
+else
+    printf "\n\n install RCLONE \n\n"
+    sudo apt update
+    sudo -v ; curl https://rclone.org/install.sh | sudo bash
+fi
 
 # install restic
-printf "\n\n install RESTIC \n\n"
-sudo apt install restic
+if command -v restic >/dev/null 2>&1; then
+    printf "restic is already installed.\n"
+else
+    printf "\n\n install RESTIC \n\n"
+    sudo apt install restic
+fi
 
 ## MAKE SURE RANDOM KEY FOR KEEPASS IS BACKED
 # 
